@@ -1,0 +1,156 @@
+*{
+    box-sizing: border-box;
+    padding: 0;
+    margin: 0;
+    text-decoration: none;
+    list-style: none;
+    text-transform: none;
+    outline: none;
+    user-select: none;
+    border: none;
+    font-family:'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+}
+body{ 
+    background: #dde1e7;
+}
+.afterbody{
+    min-height: 100vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 100%;
+}
+.content{
+    width: 330px;
+    height: 470px;
+    padding: 30px;
+    box-shadow: -3px -3px 7px #ffffff73, 2px 2px 3px rgba(94, 104, 121, 0.288);
+}
+h1{
+    text-align: center;
+    color: #333;
+    margin-bottom: 4rem;
+}
+.field{
+    width: 100%;
+    height: 50px;
+    position: relative;
+    background: none;
+    margin-top: 1.8rem;
+}
+.field input{
+    width: 100%;
+    height: 100%;
+    background: none;
+    padding-left: 50px;
+    color: #333;
+    font-size: 18px;
+    border-radius: 30px;
+    box-shadow:inset -3px -3px 7px #ffffff73,inset 2px 2px 3px rgba(94, 104, 121, 0.288);
+}
+.field:nth-child(2){
+    margin-top: 2.5rem;
+}
+.field svg{
+    position: absolute;
+    left: 0;
+    transform: translateY(-50%);
+    top: 50%;
+    color: #333;
+    padding-left: .7rem;
+    width: 45px;
+    height: 45px;
+}
+.field label{
+    position: absolute;
+    text-transform: capitalize;
+    top: 50%;
+    left: 50px;
+    font-weight: 700;
+    transition: .3s;
+    pointer-events: none;
+    transform: translateY(-50%);
+    color: #444;
+    /* font-size: ; */
+}
+.field input:focus ~ label,
+.field input:valid ~ label{
+    top: -20px;
+    left: 15px;
+}
+.field #hide,.field #show{
+    margin-left: 83%;
+    cursor: pointer;
+    width: 35px;
+}
+.field #hide{
+    display: none;
+}
+.field #show{
+    display: inline-block;
+}
+.fogot,.signup{
+    margin: 20px auto;
+    margin-bottom: 15px;
+}
+.fogot a,.signup a{
+    color:#0984e3;
+    font-size: 15px;
+    text-transform: capitalize;
+    position: relative;
+    transition: .5s linear;
+    font-weight: 600;
+}
+.fogot{
+    height: 30px;
+    overflow: hidden;
+    width: 8rem;
+}
+.fogot a::before{
+    content: '';
+    position: absolute;
+    width: 100%;
+    height: 3px;
+    background: #0985e3ad;
+    bottom: -5px;
+    border-radius: 1rem;
+    left: 0;
+    transform: translate(-105%,20%);
+}
+.fogot a:hover::before{
+    animation: 1s linear 0s infinite alternate move_eye;
+}
+.fogot a:hover{
+    color: #444;
+}
+.submit-btn input{
+    width: 100%;
+    cursor: pointer;
+    height: 50px;
+    color: #333;
+    border-radius: 30px;
+    overflow: hidden;
+    font-size: 18px;
+    text-align: center;
+    background: #dde1e7;
+    font-weight: 600;
+    margin-bottom: 10px;
+    box-shadow: -3px -3px 7px #ffffff73, 2px 2px 3px rgba(94, 104, 121, 0.288);
+}
+.submit-btn input:active{
+    box-shadow:inset -3px -3px 7px #ffffff73,inset 2px 2px 3px rgba(94, 104, 121, 0.288);
+}
+.signup{
+    text-transform: capitalize;
+    text-align: center;
+    color: #333;
+    font-weight: 600;
+}
+@keyframes move_eye { 
+    from {
+        transform: translate(-100%,20%);
+    } 
+    to { 
+        transform: translate(120%,20%);
+    }  
+}
